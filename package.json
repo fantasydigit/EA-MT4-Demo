@@ -1,0 +1,47 @@
+{
+    "name": "@reiryoku/mida",
+    "version": "2022.5.0",
+    "description": "The open-source and cross-platform trading framework",
+    "license": "MIT",
+    "homepage": "https://github.com/Reiryoku-Technologies/Mida",
+    "bugs": {
+        "url": "https://github.com/Reiryoku-Technologies/Mida/issues",
+        "email": "dev@reiryoku.com"
+    },
+    "author": {
+        "name": "Vasile Pește / Reiryoku Technologies",
+        "email": "vasile.peste@reiryoku.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Reiryoku-Technologies/Mida.git"
+    },
+    "scripts": {
+        "mida:lint": "eslint . --ext .ts,.js",
+        "mida:tsc": "ttsc",
+        "mida:test": "npm run mida:tsc && jest --verbose",
+        "mida:build": "rm -rf ./build && npm run mida:lint && npm run mida:tsc && jest",
+        "main": "npm run mida:tsc && node ./build/entry/node/main.js",
+        "prepublishOnly": "npm run mida:build"
+    },
+    "main": "./build/entry/node/main.js",
+    "types": "./build/entry/node/main.d.ts",
+    "files": [
+        "build",
+        "entry",
+        "src",
+        "tests"
+    ],
+    "devDependencies": {
+        "@reiryoku/eslint-config-reiryoku": "^3.0.0",
+        "@types/jest": "^28.1.7",
+        "@types/node": "^18.7.9",
+        "@typescript-eslint/eslint-plugin": "^5.33.1",
+        "@typescript-eslint/parser": "^5.33.1",
+        "eslint": "^8.22.0",
+        "jest": "^28.1.3",
+        "ttypescript": "^1.5.13",
+        "typescript": "^4.7.4",
+        "typescript-transform-paths": "^3.3.1"
+    }
+}
