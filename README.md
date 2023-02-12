@@ -1,5 +1,5 @@
 <br><br>
-<p align="center">
+<p align="center"> 
     <img src="images/logo-light.svg#gh-light-mode-only" alt="Mida" width="352px">
     <img src="images/logo-dark.svg#gh-dark-mode-only" alt="Mida" width="352px">
 </p>
